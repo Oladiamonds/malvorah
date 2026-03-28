@@ -23,7 +23,7 @@ const services = [
     title: "Malvorah Advance",
     subtitle: "Scale Smarter, Faster",
     description:
-      "Expert go-to-market consulting for startups and scale-ups. We help you find product-market fit, build the right team, and execute the strategy that turns traction into momentum.",
+      "Expert go-to-market consulting for startups and scale-ups. We help you find product-market fit, build the right team, and execute the strategy that turns traction into momentum. From hiring your first product manager to structuring a scalable growth engine, we partner with ambitious founders to accelerate what matters.",
     features: [
       "Go-to-market strategy",
       "Product-market fit validation",
@@ -68,7 +68,7 @@ const colorMap = {
     iconText: "text-blue-500",
     border: "border-blue-100",
     accent: "text-blue-500",
-    btn: "bg-blue-500 hover:bg-blue-600 shadow-blue-500/25",
+    btn: "bg-blue-500 hover:bg-blue-600 shadow-blue-500/25 hover:shadow-blue-500/40",
     dot: "bg-blue-500",
   },
   orange: {
@@ -77,7 +77,7 @@ const colorMap = {
     iconText: "text-orange-500",
     border: "border-orange-100",
     accent: "text-orange-500",
-    btn: "bg-orange-500 hover:bg-orange-600 shadow-orange-500/25",
+    btn: "bg-orange-500 hover:bg-orange-600 shadow-orange-500/25 hover:shadow-orange-500/40",
     dot: "bg-orange-500",
   },
   green: {
@@ -86,7 +86,7 @@ const colorMap = {
     iconText: "text-emerald-500",
     border: "border-emerald-100",
     accent: "text-emerald-500",
-    btn: "bg-emerald-500 hover:bg-emerald-600 shadow-emerald-500/25",
+    btn: "bg-emerald-500 hover:bg-emerald-600 shadow-emerald-500/25 hover:shadow-emerald-500/40",
     dot: "bg-emerald-500",
   },
 };
@@ -116,10 +116,10 @@ export default function Services() {
             return (
               <div
                 key={service.title}
-                className={`group relative rounded-3xl border ${c.border} ${c.bg} p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
+                className={`group relative rounded-3xl border ${c.border} ${c.bg} p-8 hover:shadow-2xl shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col`}
               >
                 <div
-                  className={`w-14 h-14 rounded-2xl ${c.iconBg} ${c.iconText} flex items-center justify-center mb-6`}
+                  className={`w-14 h-14 rounded-2xl ${c.iconBg} ${c.iconText} flex items-center justify-center mb-6 shadow-sm`}
                 >
                   {service.icon}
                 </div>
@@ -143,9 +143,12 @@ export default function Services() {
                   ))}
                 </ul>
 
+                {/* Spacer pushes button to bottom for alignment */}
+                <div className="flex-1 min-h-6" />
+
                 <a
                   href={service.href}
-                  className={`mt-8 inline-flex items-center justify-center w-full rounded-full ${c.btn} px-6 py-3 text-sm font-semibold text-white transition-all shadow-lg`}
+                  className={`mt-6 inline-flex items-center justify-center w-full rounded-full ${c.btn} px-6 py-3 text-sm font-semibold text-white transition-all shadow-lg hover:-translate-y-0.5`}
                 >
                   {service.cta}
                 </a>

@@ -40,7 +40,7 @@ export default function Contact() {
 
             <div className="mt-10 space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center shrink-0 shadow-sm">
                   <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
@@ -57,7 +57,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center shrink-0 shadow-sm">
                   <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -74,7 +74,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center shrink-0 shadow-sm">
                   <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
@@ -95,10 +95,10 @@ export default function Contact() {
           </div>
 
           {/* Right: form */}
-          <div className="bg-white rounded-3xl border border-slate-200 p-8 md:p-10 shadow-sm">
+          <div className="bg-white rounded-3xl border border-slate-200 p-8 md:p-10 shadow-lg shadow-slate-200/50">
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full py-12 text-center">
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6 shadow-md shadow-green-100">
                   <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -112,7 +112,7 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-navy-900 mb-2">
                       First Name
@@ -120,7 +120,7 @@ export default function Contact() {
                     <input
                       type="text"
                       required
-                      className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all"
+                      className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all shadow-sm"
                       placeholder="Jane"
                     />
                   </div>
@@ -131,7 +131,7 @@ export default function Contact() {
                     <input
                       type="text"
                       required
-                      className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all"
+                      className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all shadow-sm"
                       placeholder="Doe"
                     />
                   </div>
@@ -144,7 +144,7 @@ export default function Contact() {
                   <input
                     type="email"
                     required
-                    className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all"
+                    className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all shadow-sm"
                     placeholder="jane@example.com"
                   />
                 </div>
@@ -153,7 +153,7 @@ export default function Contact() {
                   <label className="block text-sm font-medium text-navy-900 mb-2">
                     Subject
                   </label>
-                  <select className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all bg-white">
+                  <select className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all bg-white shadow-sm">
                     {subjects.map((subject) => (
                       <option key={subject} value={subject}>
                         {subject}
@@ -168,14 +168,14 @@ export default function Contact() {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all resize-none"
+                    className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all resize-none shadow-sm"
                     placeholder="Tell us about your goals and how we can help..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-blue-500 px-8 py-4 text-base font-semibold text-white hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
+                  className="w-full rounded-full bg-blue-500 px-8 py-4 text-base font-semibold text-white hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5"
                 >
                   Send Message
                 </button>

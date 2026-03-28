@@ -65,10 +65,10 @@ export default function HowItWorks() {
               {/* Step number circle */}
               <div className="relative mx-auto w-16 h-16 mb-8">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-orange-500 opacity-20 group-hover:opacity-40 transition-opacity" />
-                <div className="relative w-full h-full rounded-full bg-navy-800 border-2 border-blue-500/30 flex items-center justify-center text-white">
+                <div className="relative w-full h-full rounded-full bg-navy-800 border-2 border-blue-500/30 flex items-center justify-center text-white shadow-lg shadow-blue-500/10">
                   {step.icon}
                 </div>
-                <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gradient-to-br from-blue-500 to-blue-400 flex items-center justify-center">
+                <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gradient-to-br from-blue-500 to-blue-400 flex items-center justify-center shadow-md">
                   <span className="text-xs font-bold text-white">{step.number}</span>
                 </div>
               </div>

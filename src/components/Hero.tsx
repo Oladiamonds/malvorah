@@ -37,9 +37,10 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 text-lg md:text-xl text-slate-300 leading-relaxed">
-              We place high-potential talent into real roles at real companies.
-              You gain experience that transforms your career. Businesses gain
-              the driven professionals they need to grow.
+              We connect ambitious professionals with forward-thinking businesses.
+              Talent gains real-world experience that launches careers. Employers
+              gain pre-vetted, driven professionals who deliver results from day
+              one &mdash; with zero recruitment risk.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -70,8 +71,8 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Trust indicators */}
-            <div className="mt-12 flex items-center gap-8 text-sm text-slate-400">
+            {/* Trust indicators — dual audience */}
+            <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-400">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                   <path
@@ -90,7 +91,17 @@ export default function Hero() {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span>Real projects</span>
+                <span>Pre-vetted talent</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span>Zero recruitment fees</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
@@ -109,9 +120,9 @@ export default function Hero() {
           <div className="hidden lg:block relative">
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               {/* Floating cards */}
-              <div className="absolute top-8 right-0 bg-white rounded-2xl shadow-2xl p-6 w-64 animate-float">
+              <div className="absolute top-8 right-0 bg-white rounded-2xl shadow-2xl shadow-black/10 p-6 w-64 animate-float">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shadow-sm">
                     <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
@@ -126,7 +137,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="absolute bottom-16 left-0 bg-white rounded-2xl shadow-2xl p-6 w-56 animate-float-delayed">
+              <div className="absolute bottom-16 left-0 bg-white rounded-2xl shadow-2xl shadow-black/10 p-6 w-56 animate-float-delayed">
                 <div className="text-3xl font-bold font-[var(--font-display)] text-navy-900">
                   94%
                 </div>
@@ -144,14 +155,13 @@ export default function Hero() {
 
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full border-2 border-dashed border-white/10" />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-2 border-dashed border-white/10" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-orange-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-orange-500 flex items-center justify-center shadow-lg shadow-blue-500/30 animate-pulse-glow">
                 <span className="text-white text-2xl font-bold font-[var(--font-display)]">M</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </section>
   );
 }
